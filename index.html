@@ -10,7 +10,7 @@
 <meta property="og:description" content="Tecnologias sustentáveis para hospitais, clínicas, universidades e ensino em saúde.">
 <meta property="og:image" content="https://helsesolutions.com.br/share.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="img/logo-claro.svg" type="image/svg+xml">
+<link rel="icon" href="img/logo-helse.png" type="image/png">
 <meta name="theme-color" content="#f4f9ff">
 <link rel="canonical" href="https://helsesolutions.com.br/">
 <meta name="site-kind" content="software">
@@ -126,8 +126,8 @@ h.setAttribute('data-theme',t);h.setAttribute('lang',l==='en'?'en':'pt-BR')})();
 @media (max-width: 1023px) { .hero__art > .ly-piece--note { left: var(--s-4); bottom: var(--s-4); width: 270px; } }
 
   /* o logo do cliente tem fundo próprio: o claro funde na barra, o escuro funde no rodapé */
-  .nav__logo img { height: 56px; width: auto; display: block; mix-blend-mode: multiply; }
-  .footer--dark .nav__logo img { mix-blend-mode: screen; height: 72px; }
+  .nav__logo img { height: 64px; width: auto; display: block; mix-blend-mode: multiply; }
+  .footer--dark .nav__logo img { mix-blend-mode: normal; height: 80px; background: #fff; border-radius: 12px; }
 
   /* botões de vidro (pedido do cliente): só aparência, sem tocar em transform ou transition */
   .btn { -webkit-backdrop-filter: blur(18px) saturate(190%); backdrop-filter: blur(18px) saturate(190%);
@@ -185,7 +185,7 @@ h.setAttribute('data-theme',t);h.setAttribute('lang',l==='en'?'en':'pt-BR')})();
     --p-accent: #8ec5ff; --p-accent-ink: #0a1628; --p-action: #8ec5ff; --p-action-ink: #0a1628;
     --p-inv-bg: #050d1a; --p-inv-surface: #0f1b2e; --p-inv-ink: #f4f9ff; --p-inv-muted: #9fb0c3; }
   html[data-theme="dark"] .btn--secondary { background: linear-gradient(180deg, rgba(255, 255, 255, .22) 0%, rgba(255, 255, 255, .06) 100%); color: #f4f9ff; border-color: rgba(255, 255, 255, .28); }
-  html[data-theme="dark"] .nav__logo img { mix-blend-mode: screen; }
+  html[data-theme="dark"] .nav__logo img { mix-blend-mode: normal; background: #fff; border-radius: 12px; }
   html[data-theme="dark"] #solucoes .panel, html[data-theme="dark"] #modulos .frame { background: radial-gradient(80% 70% at 18% 8%, #1d4a73 0%, transparent 70%), linear-gradient(155deg, #12304f 0%, #14403c 100%); }
 </style>
 </head>
@@ -197,7 +197,7 @@ h.setAttribute('data-theme',t);h.setAttribute('lang',l==='en'?'en':'pt-BR')})();
 <header class="nav">
   <div class="wrap nav__bar">
     <a class="skip-link" href="#top">Ir para o conteúdo</a>
-    <a class="nav__logo" href="#top" aria-label="Helse Solutions, início"><img src="img/logo-claro.svg" alt="Helse Solutions"></a>
+    <a class="nav__logo" href="#top" aria-label="Helse Solutions, início"><img src="img/logo-helse.png" alt="Helse Solutions" width="480" height="320"></a>
     <nav class="nav__links" aria-label="Principal">
       <div class="nav__item">
         <a class="nav__link" href="#helsim">HELSIM <svg class="chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
@@ -462,7 +462,7 @@ h.setAttribute('data-theme',t);h.setAttribute('lang',l==='en'?'en':'pt-BR')})();
     <div class="closing__links">
       <div class="grid">
         <div class="span-4 stack-4">
-          <a class="nav__logo" href="#top" aria-label="Helse Solutions, início"><img src="img/logo-escuro.svg" alt="Helse Solutions" loading="lazy"></a>
+          <a class="nav__logo" href="#top" aria-label="Helse Solutions, início"><img src="img/logo-helse.png" alt="Helse Solutions" width="480" height="320" loading="lazy"></a>
           <p class="footer__lede">Sistemas de informação e tecnologias sustentáveis para a saúde.</p>
           <p><a class="link" href="mailto:comercial@helsesolutions.com.br">comercial@helsesolutions.com.br</a></p>
         </div>
@@ -502,7 +502,7 @@ h.setAttribute('data-theme',t);h.setAttribute('lang',l==='en'?'en':'pt-BR')})();
     var L=document.getElementById('lang-toggle'), M=document.getElementById('theme-toggle'), dark=h.getAttribute('data-theme')==='dark', en=lang==='en';
     if(L){L.textContent=en?'PT':'EN'; L.setAttribute('aria-label',en?'Mudar para português':'Switch to English')}
     if(M){M.setAttribute('aria-label',en?(dark?'Switch to light mode':'Switch to dark mode'):(dark?'Ativar modo claro':'Ativar modo escuro'))}
-    var logo=document.querySelector('.nav__logo img'); if(logo){logo.setAttribute('src',dark?'img/logo-escuro.svg':'img/logo-claro.svg')}
+    var logo=document.querySelector('.nav__logo img'); if(logo){void 0}
     var tc=document.querySelector('meta[name="theme-color"]'); if(tc) tc.setAttribute('content',dark?'#0a1628':'#f4f9ff');
   }
   function apply(){
